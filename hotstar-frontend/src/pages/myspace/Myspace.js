@@ -1,11 +1,13 @@
 import React from 'react'
+import { Button } from '@mui/material'
+
 
 function Myspace() {
   return (
-    <div>
-      <h1>This is a my space page</h1>
-    </div>
+    <>
+    <Button>tejas</Button>
+    </>
   )
 }
 
-export default Myspace
+export default Myspace;
