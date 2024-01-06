@@ -1,9 +1,10 @@
 import React from 'react'
+import Sidenav from '../../component/Navbar/Sidenav'
 
 function Home() {
   return (
     <div>
-      <h1>This is a home page</h1>
+      <Sidenav />
     </div>
   )
 }

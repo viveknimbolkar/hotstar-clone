@@ -1,13 +1,13 @@
 import React from "react";
-import hotstar from "../Navbar/hotstar.webp";
-import myspace from "../Navbar/myspace.png";
+import hotstar from "./hotstar.webp";
+import myspace from "./myspace.png";
 import "./Sidenav.css";
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
 import TvIcon from "@mui/icons-material/Tv";
-import MovieCreationIcon from '@mui/icons-material/MovieCreation';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import SportsBaseballIcon from '@mui/icons-material/SportsBaseball';
+import MovieCreationIcon from "@mui/icons-material/MovieCreation";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import SportsBaseballIcon from "@mui/icons-material/SportsBaseball";
 function Sidenav() {
   return (
     <div className="nav-container">
@@ -20,27 +20,27 @@ function Sidenav() {
           <span className="nav-span">Myspace</span>
         </li>
         <li className="li-span">
-          <SearchIcon style={{fontSize:"20px"}}  />
+          <SearchIcon style={{ fontSize: "20px" }} />
           <span className="nav-span">Myspace</span>
         </li>
         <li className="li-span">
-          <HomeIcon style={{fontSize:"20px"}} />
+          <HomeIcon style={{ fontSize: "20px" }} />
           <span className="nav-span">Myspace</span>
         </li>
         <li className="li-span">
-          <TvIcon style={{fontSize:"20px"}} />
+          <TvIcon style={{ fontSize: "20px" }} />
           <span className="nav-span">Myspace</span>
         </li>
         <li className="li-span">
-          <MovieCreationIcon style={{fontSize:"20px"}} />
+          <MovieCreationIcon style={{ fontSize: "20px" }} />
           <span className="nav-span">Myspace</span>
         </li>
         <li className="li-span">
-          <SportsBaseballIcon style={{fontSize:"20px"}} />
+          <SportsBaseballIcon style={{ fontSize: "20px" }} />
           <span className="nav-span">Myspace</span>
         </li>
         <li className="li-span">
-          <DashboardIcon style={{fontSize:"20px"}} />
+          <DashboardIcon style={{ fontSize: "20px" }} />
           <span className="nav-span">Myspace</span>
         </li>
       </ul>
