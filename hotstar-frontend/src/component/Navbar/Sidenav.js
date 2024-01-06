@@ -24,7 +24,7 @@ function Sidenav() {
           <span className="nav-span">Myspace</span>
         </li>
         <li className="li-span">
-          <HomeIcon style={{ fontSize: "20px" }} />
+          <HomeIcon style={{ fontSize: "30px" }} />
           <span className="nav-span">Myspace</span>
         </li>
         <li className="li-span">
