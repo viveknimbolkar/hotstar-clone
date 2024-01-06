@@ -8,9 +8,12 @@ import Movies from "./Component/Movies";
 import Category from "./Component/Category";
 import Myspace from "./Component/Myspace";
 import Sports from "./Component/Sports";
+import Sidenav from "./Navbar/Sidenav";
 
 function App() {
   return (
+    <>
+    <Sidenav />
     <BrowserRouter>
       <Routes>
         <Route path={"/mypage"} element={<Myspace />} />
@@ -21,6 +24,7 @@ function App() {
         <Route path={"/category"} element={<Category />} />
       </Routes>
     </BrowserRouter>
+    </>
   );
 }
 
