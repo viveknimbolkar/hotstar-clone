@@ -9,18 +9,19 @@ import Category from "./pages/category/Category";
 import Myspace from "./pages/myspace/Myspace";
 import Sports from "./pages/sports/Sports";
 import Sidenav from "./component/Navbar/Sidenav";
+import Layout from "./component/layout/layout";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path={"/mypage"} element={<Myspace />} />
-          <Route path={"/explore"} element={<Search />} />
-          <Route path={"/home"} element={<Home />} />
-          <Route path={"/movies"} element={<Movies />} />
-          <Route path={"/sports"} element={<Sports />} />
-          <Route path={"/category"} element={<Category />} />
+          <Route path={"/mypage"} element={<Layout componentName={"mypage"} />} />
+          <Route path={"/explore"} element={<Layout componentName={"explore"} />} />
+          <Route path={"/home"} element={<Layout componentName={"home"}/>} />
+          <Route path={"/movies"} element={<Layout componentName={"movies"}/>} />
+          <Route path={"/sports"} element={<Layout componentName={"sports"}/>} />
+          <Route path={"/category"} element={<Layout componentName={"category"}/>} />
         </Routes>
       </BrowserRouter>
     </>
