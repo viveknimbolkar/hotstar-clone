@@ -36,3 +36,6 @@
     transform: rotate(360deg);
   }
 }
+.NumberDiv__label{
+  color:rgb(137, 129, 129) !important;
+}
