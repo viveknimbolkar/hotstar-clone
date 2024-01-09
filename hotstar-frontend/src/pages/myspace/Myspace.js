@@ -197,6 +197,7 @@ const GetHelpText = styled(Typography)`
 
 function Myspace() {
   const [open, setOpen] = useState(false);
+  const [input, setInput] = useState("");
   const [activeScreen, setActiveScreen] = useState("ScreenOne");
   const handleClose = () => {
     setOpen(false);
@@ -244,7 +245,7 @@ function Myspace() {
               style={{ height: "100%", width: "90%" }}
             ></img>
           </ImageBox>
-          {activeScreen === "ScreenOne" ? <ScreenOne setActiveScreen={setActiveScreen} handleClose={handleClose} /> : <ScreenTwo setActiveScreen={setActiveScreen} handleClose={handleClose} />}
+          {activeScreen === "ScreenOne" ? <ScreenOne setActiveScreen={setActiveScreen} handleClose={handleClose} input={input} setInput={setInput}/> : <ScreenTwo setActiveScreen={setActiveScreen} handleClose={handleClose} input={input} />}
         </MainBox>
       </Modal>
     </>
@@ -260,8 +261,8 @@ font-weight:0;
 cursor:pointer;
 `;
 
-function ScreenOne({setActiveScreen,handleClose}) {
-  const [input, setInput] = useState("");
+function ScreenOne({setActiveScreen,handleClose,setInput,input}) {
+  
   return (
     <>
       <NumberBox>
@@ -409,8 +410,8 @@ font-size:19px;
 font-family:'Inter',sans-serif;
 `;
 
-function ScreenTwo({input,setActiveScreen,handleClose,inputValue}) { 
-  console.log(inputValue);
+function ScreenTwo({value,setActiveScreen,handleClose,input}) { 
+  console.log(input);
   return (
     <>
       <OtpContainer>
@@ -419,7 +420,7 @@ function ScreenTwo({input,setActiveScreen,handleClose,inputValue}) {
         <HeadingContainer>
           <BackButton onClick={() =>{setActiveScreen("ScreenOne")}}> 
             <BackArrowBackIcon></BackArrowBackIcon> Back</BackButton>
-            <span style={{fontSize:"19px",fontWeight:"bold",fontFamily:"Inter,sans-serif",color:"#e1e6f0"}}>Enter OTP sent to +91 {inputValue}</span>
+            <span style={{fontSize:"19px",fontWeight:"bold",fontFamily:"Inter,sans-serif",color:"#e1e6f0"}}>Enter OTP sent to +91{input}</span>
             </HeadingContainer>
           <OtpDiv>
              <Div sx={{ input: { color: "#fff" } }}></Div>
