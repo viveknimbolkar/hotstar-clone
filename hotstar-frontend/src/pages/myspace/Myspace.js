@@ -10,6 +10,7 @@ import Link from "@mui/material/Link";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import CallIcon from '@mui/icons-material/Call';
+import CloseIcon from '@mui/icons-material/Close';
 
 
 const DashContainer = styled(Container)`
@@ -122,7 +123,6 @@ const NumberBox = styled(Box)`
 const EnterNumber = styled(Box)`
   height: 70%;
   width: 100%;
-  margin-top: 50px;
 `;
 const NumberHeading = styled(Typography)`
   font-family: "Inter", sans-serif;
@@ -244,20 +244,28 @@ function Myspace() {
               style={{ height: "100%", width: "90%" }}
             ></img>
           </ImageBox>
-          {activeScreen === "ScreenOne" ? <ScreenOne setActiveScreen={setActiveScreen} /> : <ScreenTwo  />}
+          {activeScreen === "ScreenOne" ? <ScreenOne setActiveScreen={setActiveScreen} handleClose={handleClose} /> : <ScreenTwo setActiveScreen={setActiveScreen} handleClose={handleClose} />}
         </MainBox>
       </Modal>
     </>
   );
 }
 
+const MyCloseIcon =styled(CloseIcon)`
+font-size:40px;
+margin-left:400px;
+margin-top:15px;
+color:#666362;
+font-weight:0;
+cursor:pointer;
+`;
 
-
-function ScreenOne({setActiveScreen}) {
+function ScreenOne({setActiveScreen,handleClose}) {
   const [input, setInput] = useState("");
   return (
     <>
       <NumberBox>
+        <MyCloseIcon onClick={() =>{handleClose(false)}}></MyCloseIcon>
         <EnterNumber>
           <NumberHeading>Log in or sign up to continue</NumberHeading>
           <OtpWholeBox>
@@ -297,7 +305,7 @@ function ScreenOne({setActiveScreen}) {
               <GetOtpButton varient="contained" onClick={() =>{setActiveScreen("ScreenTwo")}}>Get OTP </GetOtpButton>
             ) : (
               ""
-            )}
+            )} 
           </OtpWholeBox>
         </EnterNumber>
         <GetHelpText>
@@ -316,7 +324,6 @@ const OtpContainer = styled(Box)`
 `;
 
 const UpperContainer = styled(Box)`
-  margin-top:65px;
   height:60%;
 `;
 
@@ -333,8 +340,7 @@ const HeadingContainer = styled(Box)`
   text-transform:capitalize;
   height:10px;
   width:2px;
-  margin:0;
-  padding:0px;
+  margin:0px;
   color:#8f98b2;
 
 `;
@@ -403,18 +409,17 @@ font-size:19px;
 font-family:'Inter',sans-serif;
 `;
 
-function ScreenTwo({setActiveScreen2}) {
- 
-  
-  
+function ScreenTwo({input,setActiveScreen,handleClose,inputValue}) { 
+  console.log(inputValue);
   return (
     <>
       <OtpContainer>
+        <MyCloseIcon onClick={() =>{handleClose(false)}}></MyCloseIcon>
         <UpperContainer>
         <HeadingContainer>
-          <BackButton> 
+          <BackButton onClick={() =>{setActiveScreen("ScreenOne")}}> 
             <BackArrowBackIcon></BackArrowBackIcon> Back</BackButton>
-            <span style={{fontSize:"19px",fontWeight:"bold",fontFamily:"Inter,sans-serif",color:"#e1e6f0"}}>Enter OTP sent to +918888888888</span>
+            <span style={{fontSize:"19px",fontWeight:"bold",fontFamily:"Inter,sans-serif",color:"#e1e6f0"}}>Enter OTP sent to +91 {inputValue}</span>
             </HeadingContainer>
           <OtpDiv>
              <Div sx={{ input: { color: "#fff" } }}></Div>
