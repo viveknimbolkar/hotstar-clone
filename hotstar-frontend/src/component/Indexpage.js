@@ -5,50 +5,60 @@ import Text from "../component/Text.webp";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import AddIcon from "@mui/icons-material/Add";
 
-function Videobackground(){
-  return(
-    
-      <video style={{ minHeight:"80%" ,minWidth:"100%",position:"absolute",objectFit:"cover",zIndex:"-1" }} loop="true" autoPlay="true" src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"></video>
-  )
+function Videobackground() {
+  return (
+    <video
+      style={{
+        height: "100%",
+        width: "100%",
+        position: "absolute",
+        objectFit: "cover",
+        zIndex: "-1",
+        inset:0,
+      }}
+      loop="true"
+      autoPlay="true"
+      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+    ></video>
+  );
 }
 
-function Indexpage({year,time}) {
+function Indexpage({ year, time,language,describe }) {
   const Indexcont = styled(Box)`
     width: 100%;
-    height:100%;
+    height: 100%;
+    margin-top:auto;
   `;
   const Indexcontainer = styled(Box)`
     display: flex;
     color: white;
-    justify-content:left;
+    background: transperancy;
+    justify-content: left;
     width: 400px;
     padding: 20px;
     flex-direction: column;
-    margin-top:450px;
     gap: 20px;
-    align-items:self-start;
+    align-items: self-start;
   `;
   const Textcont = styled(Box)`
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding-bottom:10px;
+    padding-bottom: 10px;
   `;
   const Imgbox = styled(Box)`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom:10px;
-
+    padding-bottom: 10px;
   `;
   const Tcont = styled(Box)`
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding-bottom:10px;
-
+    padding-bottom: 10px;
   `;
   const Tbtn = styled(Box)`
     display: flex;
@@ -57,7 +67,6 @@ function Indexpage({year,time}) {
     gap: 15px;
   `;
   return (
-    
     <Indexcont>
       <Videobackground />
       <Indexcontainer>
@@ -101,7 +110,7 @@ function Indexpage({year,time}) {
             }}
             variant="h6"
           >
-            3 languages
+            {language}
           </Typography>
           <Button
             variant="contained"
@@ -116,7 +125,7 @@ function Indexpage({year,time}) {
               position: "relative",
               overflow: "hidden",
               opacity: "1",
-              padding:"0px",
+              padding: "0px",
               width: "90px",
               transition: ".3s",
 
@@ -126,7 +135,6 @@ function Indexpage({year,time}) {
                 fontSize: "16px",
                 transitionProperty: "transform ,background-color",
               },
-
             }}
           >
             U/A 7+
@@ -134,7 +142,6 @@ function Indexpage({year,time}) {
         </Textcont>
         <Typography
           sx={{
-            // textAlign: "center",
             fontSize: "13px",
             fontFamily: "sans-serif",
             fontWeight: "500",
@@ -146,11 +153,10 @@ function Indexpage({year,time}) {
           component="p"
           variant="h6"
         >
-          top cricketer and paravin tambe extraordinary journey proves his
-          hardwork
+          {describe}
         </Typography>
         <Tcont>
-          <Typography variant="h6" sx={{ fontSize: "14px", fontWeight: "600"}}>
+          <Typography variant="h6" sx={{ fontSize: "14px", fontWeight: "600" }}>
             Biopic |
           </Typography>
           <Typography variant="h6" sx={{ fontSize: "14px", fontWeight: "600" }}>
