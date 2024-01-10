@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fb532045.css",
+    "main.js": "/static/js/main.be392428.js",
+    "static/js/787.aa3dbe89.chunk.js": "/static/js/787.aa3dbe89.chunk.js",
+    "static/media/Hotstarlogo.jpg": "/static/media/Hotstarlogo.8d04e85148d07b72f87e.jpg",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.fb532045.css.map": "/static/css/main.fb532045.css.map",
+    "main.be392428.js.map": "/static/js/main.be392428.js.map",
+    "787.aa3dbe89.chunk.js.map": "/static/js/787.aa3dbe89.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb532045.css",
+    "static/js/main.be392428.js"
+  ]
+}
