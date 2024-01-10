@@ -6,14 +6,13 @@ import Indexpage from "../../component/Indexpage";
 
 function Home() {
   const BodyWrapper = styled(Box)`
-    border: 2px solid red;
-    width: 20%;
-    height: 100%;
-    
+    width: 100%;
+    height:100%;
   `;
   return (
     <>
-      <Indexpage />
+      <Indexpage year={"2024"} time={"2h 20min"} />    
+      
     </>
   );
 }

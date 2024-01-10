@@ -5,39 +5,50 @@ import Text from "../component/Text.webp";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import AddIcon from "@mui/icons-material/Add";
 
-function Indexpage() {
+function Videobackground(){
+  return(
+    
+      <video style={{ minHeight:"80%" ,minWidth:"100%",position:"absolute",objectFit:"cover",zIndex:"-1" }} loop="true" autoPlay="true" src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"></video>
+  )
+}
+
+function Indexpage({year,time}) {
   const Indexcont = styled(Box)`
-    border: 2px solid red;
-    height: 100vh;
     width: 100%;
-    color: white;
-      `;
+    height:100%;
+  `;
   const Indexcontainer = styled(Box)`
     display: flex;
-    align-items: center;
-    border: 2px solid red;
+    color: white;
+    justify-content:left;
     width: 400px;
     padding: 20px;
     flex-direction: column;
-    margin-top: 300px;
+    margin-top:450px;
     gap: 20px;
+    align-items:self-start;
   `;
   const Textcont = styled(Box)`
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    padding-bottom:10px;
   `;
   const Imgbox = styled(Box)`
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom:10px;
+
   `;
   const Tcont = styled(Box)`
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    padding-bottom:10px;
+
   `;
   const Tbtn = styled(Box)`
     display: flex;
@@ -46,7 +57,9 @@ function Indexpage() {
     gap: 15px;
   `;
   return (
+    
     <Indexcont>
+      <Videobackground />
       <Indexcontainer>
         <Imgbox>
           <Box
@@ -68,7 +81,7 @@ function Indexpage() {
             year={"2022"}
             variant="h6"
           >
-            2024
+            {year}
           </Typography>
           <Typography
             sx={{
@@ -78,7 +91,7 @@ function Indexpage() {
             }}
             variant="h6"
           >
-            2h 22m
+            {time}
           </Typography>
           <Typography
             sx={{
@@ -103,6 +116,7 @@ function Indexpage() {
               position: "relative",
               overflow: "hidden",
               opacity: "1",
+              padding:"0px",
               width: "90px",
               transition: ".3s",
 
@@ -112,6 +126,7 @@ function Indexpage() {
                 fontSize: "16px",
                 transitionProperty: "transform ,background-color",
               },
+
             }}
           >
             U/A 7+
@@ -119,7 +134,7 @@ function Indexpage() {
         </Textcont>
         <Typography
           sx={{
-            textAlign: "center",
+            // textAlign: "center",
             fontSize: "13px",
             fontFamily: "sans-serif",
             fontWeight: "500",
@@ -135,7 +150,7 @@ function Indexpage() {
           hardwork
         </Typography>
         <Tcont>
-          <Typography variant="h6" sx={{ fontSize: "14px", fontWeight: "600" }}>
+          <Typography variant="h6" sx={{ fontSize: "14px", fontWeight: "600"}}>
             Biopic |
           </Typography>
           <Typography variant="h6" sx={{ fontSize: "14px", fontWeight: "600" }}>
