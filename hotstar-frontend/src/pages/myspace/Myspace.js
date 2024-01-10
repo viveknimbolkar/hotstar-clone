@@ -278,7 +278,6 @@ function ScreenOne({setActiveScreen,handleClose,setInput,input}) {
                 className="NumberDiv"
                 InputLabelProps={{ className: "NumberDiv__label" }}
                 value={input}
-                maxLength={2}
                 onChange={(event) => {
                   if(event.target.value.split("").length >= 11 )
                   return;
