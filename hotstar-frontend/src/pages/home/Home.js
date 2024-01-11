@@ -1,23 +1,9 @@
-import React from "react";
-import Sidenav from "../../component/Navbar/Sidenav";
-import { Box } from "@mui/material";
 import Indexpage from "../../component/Indexpage";
 import React from "react";
-import styled from "@emotion/styled";
-import { Box } from "@mui/material";
 import Adv from "../../component/Adv";
 
 function Home() {
   return (
-    <>
-      <Indexpage
-        year={"2024"}
-        time={"2h 20min"}
-        language={"3 languages"}
-        describe={"top cricketer and paravin tambe extraordinary journey proves his"}
-      />
-    </>
-  );
     <>
       <Adv
         src={
@@ -25,6 +11,14 @@ function Home() {
         }
         movie={"Movie name"}
         date={"janewari 6"}
+      />
+      <Indexpage
+        year={"2024"}
+        time={"2h 20min"}
+        language={"3 languages"}
+        describe={
+          "top cricketer and paravin tambe extraordinary journey proves his"
+        }
       />
     </>
   );
