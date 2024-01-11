@@ -15,7 +15,7 @@ import CloseIcon from '@mui/icons-material/Close';
 
 const DashContainer = styled(Container)`
   height: 800px;
-  min-width: 100%;
+  min-width: 94%;
   background: rgb(15, 16, 20);
   background: linear-gradient(
     180deg,
@@ -38,7 +38,7 @@ const Help = styled(Box)`
   background: url(https://www.hotstar.com/assets-x/web/assets-ui-lib/images/stars.9c90b28001575d3d107b.svg);
 `;
 const HelpButton = styled(Button)`
-  margin-left: 1170px;
+  margin-left: 1100px;
   margin-top: 15px;
   height: 50px;
   width: 240px;
@@ -278,7 +278,6 @@ function ScreenOne({setActiveScreen,handleClose,setInput,input}) {
                 className="NumberDiv"
                 InputLabelProps={{ className: "NumberDiv__label" }}
                 value={input}
-                maxLength={2}
                 onChange={(event) => {
                   if(event.target.value.split("").length >= 11 )
                   return;
