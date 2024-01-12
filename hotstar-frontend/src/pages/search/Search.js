@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import { Box, TextField, Button, Typography } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import zIndex from "@mui/material/styles/zIndex";
 
 const SearchDashContainer = styled(Container)`
   height: 800px;
@@ -82,7 +83,8 @@ const HoverPoster = styled(Box)`
   border-radius: 10px;
   inset: 0;
   scale: 1.5;
-  background: #252833;
+  //linear-gradient(180deg,rgba(22,24,31,0),rgba(22,24,31,.15) 24.61%,rgba(22,24,31,.3) 38.57%,rgba(22,24,31,.75) 64.27%,rgba(22,24,31,.92) 82.94%,#16181f)
+  background:rgba(22,24,31,1);
   display: none;
   z-index: 100;
   overflow: hidden;
@@ -173,10 +175,11 @@ function Images({
         <img
           className={"post-image"}
           style={{
-            ObjectFit: "contain",
-            minHeight: "100%",
-            minWidth: "100%",
+            ObjectFit: "cover",
+            // minHeight: "100%",
+            // minWidth: "100%",
             height:"100%",
+            width:"100%",
             borderRadius: "10px",
           }}
           src={src}
@@ -202,6 +205,7 @@ const InsideImage = styled(Box)`
   max-width:100%;
   height:100%;
   width:100%;
+  border:none;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   object-fit:contain;
@@ -212,15 +216,15 @@ const InsideImage = styled(Box)`
 const ImageButtonDiv = styled(Box)`
   height: 40px;
   width: 100%;
+  border:none;
+  margin:none;
   display: flex;
   flex-direction: row;
 `;
 const WatchNowButton = styled(Button)`
   height: 30px;
-  width: 75%;
+  width: 80%;
   display: flex;
-  margin-left: 5px;
-  margin-top:2px;
   background: #f9f6ee;
   font-size: 9px;
   font-weight: 600;
@@ -230,9 +234,8 @@ const WatchNowButton = styled(Button)`
 const AddButton = styled(Button)`
   height: 30px;
   min-width: 35px;
-  margin-left: 6px;
-  margin-top:2px;
-  background: #747882;
+  margin-left: 9px;
+  background: #252833;
   color: #f9f6ee;
 `;
 
@@ -241,7 +244,7 @@ const PlayMyArrowIcon = styled(PlayArrowIcon)`
 `;
 
 const SubTitle = styled(Box)`
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 11px;
   font-weight: 600;
   display: flex;
@@ -250,7 +253,7 @@ const SubTitle = styled(Box)`
 `;
 const Year = styled(Typography)`
   font-size: 11px;
-  margin-left: 6px;
+  margin-left:2px;
   font-weight: 600;
 `;
 
@@ -265,7 +268,7 @@ const DescriptionDiv = styled(Box)`
   color: #747882;
   font-family: "Inter", sans-serif;
   margin-top: 2px;
-  margin-left: 6px;
+  margin-left: 2px;
   text-transform: capitalize;
 `;
 
@@ -281,17 +284,23 @@ function HoverPosterInside({
   return (
     <>
       <InsideImage>
+        <div style={{width:"100%",height:"130px",overflow:"hidden",position:"relative",border:"none"}}>
         <img
           src={src}
           style={{
-            height: "130px",
             width: "100%",
             borderTopLeftRadius: "10px",
             borderTopRightRadius: "10px",
-            objectFit: "contain",
+            objectFit: "cover",
           }}
           id={id}
         />
+        <div style={{border:"none",position:"absolute",height:"50px",width:"100%",bottom:"0",background:"linear-gradient(180deg,rgba(22,24,31,0),rgba(22,24,31,.15) 24.61%,rgba(22,24,31,.3) 38.57%,rgba(22,24,31,.75) 64.27%,rgba(22,24,31,.92) 82.94%,#16181f)"}}>
+
+        </div>
+        </div>
+
+        <div style={{padding:"10px"}}>
         <ImageButtonDiv>
           <WatchNowButton>
             <PlayMyArrowIcon></PlayMyArrowIcon>
@@ -312,6 +321,7 @@ function HoverPosterInside({
           </UlDiv>
         </SubTitle>
         <DescriptionDiv>{description}</DescriptionDiv>
+        </div>
       </InsideImage>
     </>
   );
