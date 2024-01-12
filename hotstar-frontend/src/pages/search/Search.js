@@ -69,6 +69,7 @@ const ImagePosterDiv = styled(Box)`
   width: 185px;
   border-radius: 5px;
   position: relative;
+  object-fit: contain;
   &:hover .show-poster {
     display: block;
     cursor: pointer;
@@ -84,6 +85,8 @@ const HoverPoster = styled(Box)`
   background: #252833;
   display: none;
   z-index: 100;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 const movies = [
   {
@@ -101,7 +104,8 @@ const movies = [
     id: 2,
     src: "https://www.themoviedb.org/t/p/original/dvfd4FXQzrFoR4XQqjD7urojn7Y.jpg",
     name: "Dance+",
-    description: "Dance+ reality show..",
+    description:
+      "Dance+ reality ....",
     language: "Hindi",
     year: "2024",
     url: "",
@@ -155,18 +159,24 @@ function Search() {
   );
 }
 
-function Images({ src, year, language, channelName, restriction, description}) {
+function Images({
+  src,
+  year,
+  language,
+  channelName,
+  restriction,
+  description,
+}) {
   return (
     <>
       <ImagePosterDiv>
         <img
           className={"post-image"}
           style={{
-            ObjectFit: "cover",
+            ObjectFit: "contain",
             minHeight: "100%",
             minWidth: "100%",
-            maxHeight: "100%",
-            minWidth: "100%",
+            height:"100%",
             borderRadius: "10px",
           }}
           src={src}
@@ -188,10 +198,13 @@ function Images({ src, year, language, channelName, restriction, description}) {
 }
 
 const InsideImage = styled(Box)`
-  height: 50%;
-  width: 99%;
+  max:height:100%;
+  max-width:100%;
+  height:100%;
+  width:100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  object-fit:contain;
   display: flex;
   flex-direction: column;
 `;
@@ -207,7 +220,8 @@ const WatchNowButton = styled(Button)`
   width: 75%;
   display: flex;
   margin-left: 5px;
-  background: #F9F6EE;
+  margin-top:2px;
+  background: #f9f6ee;
   font-size: 9px;
   font-weight: 600;
   color: black;
@@ -217,8 +231,9 @@ const AddButton = styled(Button)`
   height: 30px;
   min-width: 35px;
   margin-left: 6px;
+  margin-top:2px;
   background: #747882;
-  color: #F9F6EE;
+  color: #f9f6ee;
 `;
 
 const PlayMyArrowIcon = styled(PlayArrowIcon)`
@@ -229,9 +244,9 @@ const SubTitle = styled(Box)`
   margin-top: 10px;
   font-size: 11px;
   font-weight: 600;
-  display:flex;
-  color:#F9F6EE;
-  font-family:"Inter",sans-serif;
+  display: flex;
+  color: #f9f6ee;
+  font-family: "Inter", sans-serif;
 `;
 const Year = styled(Typography)`
   font-size: 11px;
@@ -241,20 +256,18 @@ const Year = styled(Typography)`
 
 const UlDiv = styled(Box)`
   display: flex;
-  margin:-10px;
-  margin-left:-22px;
+  margin: -10px;
+  margin-left: -22px;
 `;
-
 
 const DescriptionDiv = styled(Box)`
-font-size:11px;
-color:	#747882;
-font-family:"Inter",sans-serif;
-margin-top:2px;
-margin-left:6px;
-text-transform:capitalize;
+  font-size: 11px;
+  color: #747882;
+  font-family: "Inter", sans-serif;
+  margin-top: 2px;
+  margin-left: 6px;
+  text-transform: capitalize;
 `;
-
 
 function HoverPosterInside({
   src,
@@ -263,7 +276,7 @@ function HoverPosterInside({
   language,
   channelName,
   restriction,
-  description
+  description,
 }) {
   return (
     <>
@@ -272,9 +285,10 @@ function HoverPosterInside({
           src={src}
           style={{
             height: "130px",
-            width: "220px",
+            width: "100%",
             borderTopLeftRadius: "10px",
             borderTopRightRadius: "10px",
+            objectFit: "contain",
           }}
           id={id}
         />
@@ -290,7 +304,7 @@ function HoverPosterInside({
         <SubTitle>
           <Year>{year}</Year>
           <UlDiv>
-            <ul style={{display:"flex" ,gap:'20px'}}>
+            <ul style={{ display: "flex", gap: "20px" }}>
               <li>{language}</li>
               <li>{channelName}</li>
               <li>{restriction}</li>
