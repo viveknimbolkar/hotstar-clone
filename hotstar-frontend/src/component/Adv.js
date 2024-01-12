@@ -6,11 +6,11 @@ function Adv({src,movie,date}) {
   const Advcont = styled(Box)`
     height: 15rem;
     z-index:1;
-    width: 75rem;
+    width: 80rem;
     display: flex;
-    margin-left:5rem;
+    margin-left:10rem;
     gap:6rem;
-    padding: 10px;
+    padding: 20px;
     margin-top:2rem;
     justify-content:flex-start;
     border-radius:8px;

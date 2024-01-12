@@ -26,18 +26,21 @@ function Videobackground() {
 function Indexpage({ year, time,language,describe }) {
   const Indexcont = styled(Box)`
     width: 100%;
-    height: 100%;
-    margin-top:auto;
+    position:relative;
+    height: 100vh;
   `;
   const Indexcontainer = styled(Box)`
     display: flex;
     color: white;
+    left: 100px;
+    position: relative;
     background: transperancy;
-    justify-content: left;
+    justify-content:end;
     width: 400px;
     padding: 20px;
     flex-direction: column;
     gap: 20px;
+    margin-top:350px;
     align-items: self-start;
   `;
   const Textcont = styled(Box)`
