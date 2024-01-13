@@ -13,9 +13,9 @@ import CategoryOutlinedIcon from "@mui/icons-material/CategoryOutlined";
 import ChevronRightOutlinedIcon from "@mui/icons-material/ChevronRightOutlined";
 function Sidenav() {
   const NavBar = styled(Box)`
-    background: transperent;
+    background:transperent;
     width: 100px;
-    z-index:1;
+    z-index:5;
     height: 100vh;
     position:fixed;
     color: #9b9b9b;
