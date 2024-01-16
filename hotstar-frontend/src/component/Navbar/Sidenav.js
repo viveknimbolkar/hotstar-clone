@@ -13,11 +13,16 @@ import CategoryOutlinedIcon from "@mui/icons-material/CategoryOutlined";
 import ChevronRightOutlinedIcon from "@mui/icons-material/ChevronRightOutlined";
 function Sidenav() {
   const NavBar = styled(Box)`
-    background:transperent;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(2, 0, 36, 0.010263480392156854) 100%
+    );
     width: 100px;
-    z-index:5;
+    z-index: 5;
     height: 100vh;
-    position:fixed;
+    position: fixed;
     color: #9b9b9b;
     display: flex;
     flex-direction: column;
