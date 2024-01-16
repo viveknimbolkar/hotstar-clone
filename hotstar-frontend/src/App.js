@@ -10,6 +10,7 @@ import Myspace from "./pages/myspace/Myspace";
 import Sports from "./pages/sports/Sports";
 import Sidenav from "./component/Navbar/Sidenav";
 import Layout from "./component/layout/layout";
+import Footer from "./component/footer/footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path={"/movies"} element={<Layout componentName={"movies"}/>} />
           <Route path={"/sports"} element={<Layout componentName={"sports"}/>} />
           <Route path={"/category"} element={<Layout componentName={"category"}/>} />
+          <Route path={"/footer"} element={<Footer />}/>
         </Routes>
       </BrowserRouter>
     </>

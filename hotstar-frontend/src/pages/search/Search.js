@@ -1,10 +1,14 @@
 import React from "react";
 import Container from "@mui/material/Container";
 import styled from "@emotion/styled";
-import { Box, TextField, Button, Typography } from "@mui/material";
+import { Box, TextField, Button, Typography} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import zIndex from "@mui/material/styles/zIndex";
+// import { makeStyles } from "@mui/styles";
+
+
+
+
 
 const SearchDashContainer = styled(Container)`
   height: 800px;
@@ -71,7 +75,7 @@ const ImagePosterDiv = styled(Box)`
   border-radius: 5px;
   position: relative;
   object-fit: contain;
-  &:hover .show-poster {
+  &:hover .show-poster{
     display: block;
     cursor: pointer;
   }
@@ -128,6 +132,7 @@ const movies = [
 ];
 
 function Search() {
+  
   return (
     <>
       <SearchDashContainer>
@@ -230,6 +235,9 @@ const WatchNowButton = styled(Button)`
   font-weight: 600;
   color: black;
   padding-right: 10px;
+  .WatchNowButton:disabled{
+    background:#fff;
+  }
 `;
 const AddButton = styled(Button)`
   height: 30px;
@@ -281,6 +289,7 @@ function HoverPosterInside({
   restriction,
   description,
 }) {
+  
   return (
     <>
       <InsideImage>
@@ -302,7 +311,7 @@ function HoverPosterInside({
 
         <div style={{padding:"10px"}}>
         <ImageButtonDiv>
-          <WatchNowButton>
+          <WatchNowButton className={WatchNowButton}>
             <PlayMyArrowIcon></PlayMyArrowIcon>
             <span style={{ marginTop: "3px", marginLeft: "5px" }}>
               Watch Now
