@@ -3,8 +3,6 @@ import React from "react";
 import Adv from "../../component/Adv";
 import styled from "@emotion/styled";
 import { Box } from "@mui/material";
-import Sidenav from "../../component/Navbar/Sidenav";
-
 function Home() {
   const Homecont = styled(Box)`
   display:flex;

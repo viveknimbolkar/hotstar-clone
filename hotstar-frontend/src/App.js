@@ -2,13 +2,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
-import Home from "./pages/home/Home";
-import Search from "./pages/search/Search";
-import Movies from "./pages/movies/Movies";
-import Category from "./pages/category/Category";
-import Myspace from "./pages/myspace/Myspace";
-import Sports from "./pages/sports/Sports";
-import Sidenav from "./component/Navbar/Sidenav";
 import Layout from "./component/layout/layout";
 
 function App() {
