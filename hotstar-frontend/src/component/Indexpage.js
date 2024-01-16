@@ -15,7 +15,6 @@ function Videobackground() {
         objectFit: "cover",
         zIndex: "-1",
         inset:0,
-        left:"100px",
       }}
       loop="true"
       autoPlay="true"
