@@ -106,6 +106,7 @@ const DownLoadStore = styled(Box)`
 
 const UlDiv = styled(Box)`
 display:flex;
+font-family:Inter,sans-serif;
 `;
 
 function Footer() {
@@ -147,8 +148,8 @@ function Footer() {
           <TermsPolicy>
             <p style={{fontSize:"16px",fontWeight:"500",lineHeight:"14px",fontFamily:"Inter,sans-serif",color:"#8f98b2"}}>© 2024 STAR.All Rights Reserved.</p>
             <UlDiv>
-            <ul style={{display:"flex",gap:"20px",padding:"0",marginTop:"0",color:"#8f98b2",fontSize:"16px",fontFamily:"Inter sans-serif",fontWeight:"500px",lineHeight:"20px",cursor:"pointer",textDecoration:"none"}}>
-              <a style={{fontFamily:"Inter sans-serif"}}>Terms Of Use</a>
+            <ul style={{display:"flex",gap:"20px",padding:"0",marginTop:"0",color:"#8f98b2",fontSize:"16px",fontWeight:"500px",lineHeight:"20px",cursor:"pointer",textDecoration:"none"}}>
+              <a>Terms Of Use</a>
               <a>Privicy Policy</a>
               <a>FAQ</a>
             </ul>
@@ -162,6 +163,7 @@ function Footer() {
                 style={{
                   height: "50px",
                   width: "150px",
+                  borderRadius:"5px"
                 }}
               />
             </GoogleButton>
@@ -171,6 +173,7 @@ function Footer() {
                 style={{
                   height: "50px",
                   width: "150px",
+                  borderRadius:"5px"
                 }}
               />
             </DownLoadStore>

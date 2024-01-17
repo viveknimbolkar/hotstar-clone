@@ -9,6 +9,7 @@ import Movies from "../../pages/movies/Movies";
 import Home from "../../pages/home/Home";
 import { Box } from "@mui/material";
 
+
 function Layout({ componentName }) {
   const RootLayout = styled(Box)`
     width: 100%;
@@ -16,7 +17,7 @@ function Layout({ componentName }) {
     // background:url("https://images.pexels.com/photos/1766838/pexels-photo-1766838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
   `;
   return (
-    <RootLayout>
+    <RootLayout >
       <Sidenav />
       {componentName === "mypage" ? (
         <Myspace />
@@ -34,6 +35,7 @@ function Layout({ componentName }) {
         ""
       )}
     </RootLayout>
+    
   );
 }
 
